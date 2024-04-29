@@ -8,13 +8,12 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const body_parser_1 = __importDefault(require("body-parser"));
 const table_routes_1 = require("./routes/table.routes");
+const app = (0, express_1.default)();
 const corsOptions = {
     credentials: true,
     origin: ['http://localhost:3000', 'https://408-ui.netlify.app/'] // Whitelist the domains you want to allow
 };
-
-app.use(cors(corsOptions));
-const app = (0, express_1.default)();
+app.use((0, cors_1.default)(corsOptions));
 app.use((0, cors_1.default)());
 app.use(body_parser_1.default.json());
 app.use(body_parser_1.default.urlencoded({ extended: true }));
