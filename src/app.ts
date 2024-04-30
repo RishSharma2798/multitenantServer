@@ -16,9 +16,10 @@ res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
 res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');   next(); });
 
 // app.use(cors());
+app.use('/table', tableRouter);
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use('/table', tableRouter);
 
 export default app;
