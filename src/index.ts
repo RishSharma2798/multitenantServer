@@ -4,7 +4,7 @@ import { Sequelize } from 'sequelize';
 const Port = 4000;
 var http = require('http').Server(app);
 
-export const dbName =  'tenant_1'
+export const dbName =  'tenant_2'
 let sequelize;
 
 async function startServer() {

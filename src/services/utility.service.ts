@@ -8,3 +8,4 @@ export const parseJwt = async (token) => {
 
     return token;
 };
+   

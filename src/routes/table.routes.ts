@@ -11,11 +11,11 @@ router.get(
     }
 );
 
-// router.post(
-//     '/create',validateTablePayload,
-//     (req: Request, res: Response) => {
-//         Table.createTableData(req, res);
-//     }
-// );
+router.post(
+    '/create',validateTablePayload,
+    (req: Request, res: Response) => {
+        Table.createTableData(req, res);
+    }
+);
 
 export { router };

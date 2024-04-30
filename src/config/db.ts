@@ -34,4 +34,6 @@ export async function connectToDatabase(dbName: string): Promise<Sequelize> {
       throw error;
     }
   }
+
+  export { sequelize }
   
